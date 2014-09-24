@@ -15,7 +15,7 @@
 
 package sip_over_oppnet.simulations;
 
-// numOfHosts: 10
+// numOfHosts: 2
 // parametric: true
 // static:     false
 
@@ -26,11 +26,16 @@ import inet.world.radio.ChannelControl;
 network OppNetScenario1
 {
     parameters:
-        int numHosts;
+        int numMobileHosts;
+        int numStationaryHosts;
     submodules:
-        host[numHosts]: AdhocHost {
+        mobHost[numMobileHosts]: AdhocHost {
             parameters:
-                @display("r=,,#707070;p=346,50");
+                @display("r=,,#707070;p=297,129");
+        }
+        stationaryHost[numStationaryHosts]: AdhocHost {
+            parameters:
+                @display("r=,,#404040");
         }
 
         channelControl: ChannelControl {

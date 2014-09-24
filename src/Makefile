@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for sip-over-oppnet
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep
+#  opp_makemake -f --deep -L/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/out/$$\(CONFIGNAME\)/src -linet -DINET_IMPORT -KINETMANET_2_0_PROJ=/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2
 #
 
 # Name of target to be created (-o option)
@@ -20,7 +20,8 @@ INCLUDE_PATH = -I.
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS =
+LIBS = -L$(INETMANET_2_0_PROJ)/out/$(CONFIGNAME)/src  -linet
+LIBS += -Wl,-rpath,`abspath $(INETMANET_2_0_PROJ)/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = ../out
@@ -32,6 +33,9 @@ OBJS =
 
 # Message files
 MSGFILES =
+
+# Other makefile variables (-K)
+INETMANET_2_0_PROJ=/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2
 
 #------------------------------------------------------------------------------
 
@@ -57,7 +61,7 @@ include $(CONFIGFILE)
 OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
 OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS) -DINET_IMPORT $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 
 # we want to recompile everything if COPTS changes,
