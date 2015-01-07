@@ -23,6 +23,8 @@ import inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator;
 import inet.nodes.inet.AdhocHost;
 import inet.world.radio.ChannelControl;
 
+import sip_over_oppnet.*;
+
 network OppNetScenario1
 {
     parameters:
@@ -33,6 +35,7 @@ network OppNetScenario1
             parameters:
                 @display("r=,,#707070;p=297,129");
         }
+        
         stationaryHost[numStationaryHosts]: AdhocHost {
             parameters:
                 @display("r=,,#404040");
