@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for sip-over-oppnet
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/applications/common -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/common -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/transport/tcp_common -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/wpan/networklayer/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/common -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/manetrouting/base -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/autorouting/ipv4 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers/tcp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/ipv6tunneling -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/wpan/linklayer/ieee802154/mac -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/world/radio -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ieee80211/mac -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/ipv6 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/icmpv6 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/world/powercontrol -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ieee80211mesh/locator -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/ipv4 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/mobility/common -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ieee80211/radio/errormodel -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers/ipv4 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/wpan/linklayer/ieee802154/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/battery/models -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/manetrouting/dsr -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/radio/propagation -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers/ipv6 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/world/obstacles -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ieee80211/radio -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/arp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/transport/sctp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/base -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers/sctp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/wpan/linklayer/bmac -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/transport/udp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/applications/pingapp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/radio -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/transport/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/mobility/contract -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/routing/aodv -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ethernet -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/util/headerserializers/udp -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/linklayer/ieee80211/mgmt -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/wpan/phyLayer/ieee802154 -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/status -I/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/src/networklayer/xmipv6 -L/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2/out/$$\(CONFIGNAME\)/src -linet -DINET_IMPORT -KINETMANET_2_0_PROJ=/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2
+#  opp_makemake -f --deep
 #
 
 # Name of target to be created (-o option)
@@ -14,64 +14,13 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = \
-    -I$(INETMANET_2_0_PROJ)/src/applications/common \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/common \
-    -I$(INETMANET_2_0_PROJ)/src \
-    -I$(INETMANET_2_0_PROJ)/src/transport/tcp_common \
-    -I$(INETMANET_2_0_PROJ)/src/wpan/networklayer/contract \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/common \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/manetrouting/base \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/autorouting/ipv4 \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers/tcp \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/ipv6tunneling \
-    -I$(INETMANET_2_0_PROJ)/src/wpan/linklayer/ieee802154/mac \
-    -I$(INETMANET_2_0_PROJ)/src/world/radio \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ieee80211/mac \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/ipv6 \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/icmpv6 \
-    -I$(INETMANET_2_0_PROJ)/src/world/powercontrol \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ieee80211mesh/locator \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/ipv4 \
-    -I$(INETMANET_2_0_PROJ)/src/mobility/common \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ieee80211/radio/errormodel \
-    -I$(INETMANET_2_0_PROJ)/src/util \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers/ipv4 \
-    -I$(INETMANET_2_0_PROJ)/src/wpan/linklayer/ieee802154/contract \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers \
-    -I$(INETMANET_2_0_PROJ)/src/battery/models \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/manetrouting/dsr \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/radio/propagation \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/contract \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers/ipv6 \
-    -I$(INETMANET_2_0_PROJ)/src/world/obstacles \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ieee80211/radio \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/arp \
-    -I$(INETMANET_2_0_PROJ)/src/transport/sctp \
-    -I$(INETMANET_2_0_PROJ)/src/base \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers/sctp \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/contract \
-    -I$(INETMANET_2_0_PROJ)/src/wpan/linklayer/bmac \
-    -I$(INETMANET_2_0_PROJ)/src/transport/udp \
-    -I$(INETMANET_2_0_PROJ)/src/applications/pingapp \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/radio \
-    -I$(INETMANET_2_0_PROJ)/src/transport/contract \
-    -I$(INETMANET_2_0_PROJ)/src/mobility/contract \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/routing/aodv \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ethernet \
-    -I$(INETMANET_2_0_PROJ)/src/util/headerserializers/udp \
-    -I$(INETMANET_2_0_PROJ)/src/linklayer/ieee80211/mgmt \
-    -I$(INETMANET_2_0_PROJ)/src/wpan/phyLayer/ieee802154 \
-    -I$(INETMANET_2_0_PROJ)/src/status \
-    -I$(INETMANET_2_0_PROJ)/src/networklayer/xmipv6 \
-    -I.
+INCLUDE_PATH = -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L$(INETMANET_2_0_PROJ)/out/$(CONFIGNAME)/src  -linet
-LIBS += -Wl,-rpath,`abspath $(INETMANET_2_0_PROJ)/out/$(CONFIGNAME)/src`
+LIBS =
 
 # Output directory
 PROJECT_OUTPUT_DIR = ../out
@@ -83,9 +32,6 @@ OBJS = $O/UdpMessageApp.o
 
 # Message files
 MSGFILES =
-
-# Other makefile variables (-K)
-INETMANET_2_0_PROJ=/Users/lasse/Applications/simulator/inetmanet-2.0-inetmanet-2.2
 
 #------------------------------------------------------------------------------
 
@@ -111,7 +57,7 @@ include $(CONFIGFILE)
 OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
 OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS) -DINET_IMPORT $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 
 # we want to recompile everything if COPTS changes,
@@ -169,28 +115,5 @@ depend:
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/UdpMessageApp.o: UdpMessageApp.cc \
-	$(INETMANET_2_0_PROJ)/src/applications/common/ApplicationBase.h \
-	$(INETMANET_2_0_PROJ)/src/base/Compat.h \
-	$(INETMANET_2_0_PROJ)/src/base/ILifecycle.h \
-	$(INETMANET_2_0_PROJ)/src/base/INETDefs.h \
-	$(INETMANET_2_0_PROJ)/src/base/INotifiable.h \
-	$(INETMANET_2_0_PROJ)/src/base/LifecycleOperation.h \
-	$(INETMANET_2_0_PROJ)/src/base/ModuleAccess.h \
-	$(INETMANET_2_0_PROJ)/src/base/NodeOperations.h \
-	$(INETMANET_2_0_PROJ)/src/base/NotificationBoard.h \
-	$(INETMANET_2_0_PROJ)/src/base/NotifierConsts.h \
-	$(INETMANET_2_0_PROJ)/src/base/OperationalBase.h \
-	$(INETMANET_2_0_PROJ)/src/linklayer/contract/MACAddress.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/common/IInterfaceTable.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/common/InterfaceEntry.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/common/InterfaceTable.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/common/InterfaceTableAccess.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/common/InterfaceToken.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPv4Address.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPv6Address.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPvXAddress.h \
-	$(INETMANET_2_0_PROJ)/src/networklayer/contract/IPvXAddressResolver.h \
-	$(INETMANET_2_0_PROJ)/src/transport/contract/UDPControlInfo_m.h \
-	$(INETMANET_2_0_PROJ)/src/transport/contract/UDPSocket.h \
 	UdpMessageApp.h
 

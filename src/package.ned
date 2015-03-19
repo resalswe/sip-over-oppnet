@@ -1,3 +1,3 @@
-package sip_over_oppnet;
+package sip_over_oppnet.src;
 
 @license(LGPL);

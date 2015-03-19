@@ -23,7 +23,7 @@ import inet.networklayer.autorouting.ipv4.IPv4NetworkConfigurator;
 import inet.nodes.inet.AdhocHost;
 import inet.world.radio.ChannelControl;
 
-import sip_over_oppnet.*;
+import sip_over_oppnet.src.*;
 
 network OppNetScenario1
 {

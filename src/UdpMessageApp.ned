@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sip_over_oppnet;
+package sip_over_oppnet.src;
 
 import inet.applications.IUDPApp;
 
